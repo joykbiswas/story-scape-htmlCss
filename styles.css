@@ -1,4 +1,3 @@
-/* Base Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -20,31 +19,23 @@ p {
 }
 
 /* Navbar section */
-/* .navbar{
-    max-width: 1400px;
-    margin: auto;
-    position: relative;
-    z-index: 1;
-    justify-items: end;
-}
-.navbar-content{
-    display: flex;
-    gap: 20px;
-} */
 
-li{
+li {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
     color: #645a5a;
     font-size: 1rem;
 }
-a:hover{
+
+a:hover {
     color: black;
     text-decoration: underline;
 }
-.navbar{
+
+.navbar {
     max-width: 1400px;
     margin: auto;
     position: relative;
@@ -53,38 +44,22 @@ a:hover{
     align-items: center;
     justify-content: end;
 }
-.navbar .links{
+
+.navbar .links {
     display: flex;
     gap: 1.5rem;
     padding-right: 15px;
 }
-.navbar .toggle_btn{
+
+.navbar .toggle_btn {
     color: brown;
     font-size: 1.5rem;
     cursor: pointer;
     padding: 6px;
     display: none;
 }
-/* .action_btn{
-    background-color: orange;
-    color: #f4f4f4;
-    padding: 0.5rem 1rem;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: scale 0.2 ease;
-}
-.action_btn:hover{
-    scale: 1.05;
-    color: #f4f4f4;
-}
-.action_btn:active{
-    scale: 0.95;
-} */
-.dropdown_menu{
+
+.dropdown_menu {
     display: none;
     position: absolute;
     right: 2rem;
@@ -92,19 +67,20 @@ a:hover{
     width: 300px;
     height: 0;
     background: white;
-    /* backdrop-filter: blur(15px); */
-    /* border-radius: 10px; */
     overflow: hidden;
     z-index: 10;
     transition: hight 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.dropdown_menu.open{
+
+.dropdown_menu.open {
     height: 300px;
 }
-.dropdown_menu i{
+
+.dropdown_menu i {
     padding-right: 4px;
 }
-.dropdown_menu li{
+
+.dropdown_menu li {
     /* padding: 0.3rem; */
     padding-left: 14px;
     padding-top: 7px;
@@ -112,7 +88,8 @@ a:hover{
     align-items: center;
     justify-content: left;
 }
-.dropdown_menu .action_btn{
+
+.dropdown_menu .action_btn {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -131,7 +108,7 @@ a:hover{
     align-items: center;
     justify-content: center;
     margin-top: -55px;
-    position: relative; 
+    position: relative;
 }
 
 .banner-content {
@@ -244,9 +221,10 @@ a:hover{
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 20px;
-   
+
 }
-.map-content{
+
+.map-content {
     display: flex;
     max-width: 1200px;
     /* flex-wrap: wrap; */
@@ -256,57 +234,63 @@ a:hover{
 .company-info {
     flex: 1;
     /* width: 10%; */
-  }
-  #map-info{
+}
+
+#map-info {
     flex: 1;
     /* width: 50%; */
-    
-  }
-  #map-info iframe{
+
+}
+
+#map-info iframe {
     width: 100%;
-  }
-  
-  .info-item {
+}
+
+.info-item {
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
-  }
-  
-  .label {
+}
+
+.label {
     font-weight: bold;
-  text-align: right;
-  color: #555;
-  flex: 1; /* Ensures the label takes equal width in each row */
-  margin-right: 50px;
-  }
-  
-  .value {
+    text-align: right;
+    color: #555;
+    flex: 1;
+    margin-right: 50px;
+}
+
+.value {
     text-align: left;
     color: #333;
-    flex: 2; 
-  }
-  #footer{
+    flex: 2;
+}
+
+#footer {
     padding-top: 30px;
     padding-bottom: 20px;
-  }
+}
 
 /* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
-    .navbar .links{
+    .navbar .links {
         display: none;
     }
-    .navbar .toggle_btn{
+
+    .navbar .toggle_btn {
         display: block;
     }
-    .dropdown_menu{
+
+    .dropdown_menu {
         display: block;
         left: 2rem;
         width: unset;
     }
 
-    .banner{
+    .banner {
         height: 100vh;
     }
+
     .banner h1 {
         font-size: 1.8rem;
     }
@@ -373,20 +357,24 @@ a:hover{
     .success {
         margin: 20px 60px;
     }
-    .map{
+
+    .map {
         flex-direction: column;
         text-align: center;
     }
-    .map-content{
+
+    .map-content {
         flex-direction: column;
         max-width: 700px;
         margin: 10px;
     }
-    .company-info{
+
+    .company-info {
         /* margin: 10px 30px; */
         width: 100%;
     }
-    #map-info{
+
+    #map-info {
         width: 100%;
         max-width: 100%;
     }

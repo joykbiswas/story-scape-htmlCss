@@ -3,6 +3,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 section {
@@ -19,7 +20,7 @@ p {
 }
 
 /* Navbar section */
-.navbar{
+/* .navbar{
     max-width: 1400px;
     margin: auto;
     position: relative;
@@ -29,7 +30,95 @@ p {
 .navbar-content{
     display: flex;
     gap: 20px;
+} */
+
+li{
+    list-style: none;
 }
+a{
+    text-decoration: none;
+    color: #645a5a;
+    font-size: 1rem;
+}
+a:hover{
+    color: black;
+    text-decoration: underline;
+}
+.navbar{
+    max-width: 1400px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.navbar .links{
+    display: flex;
+    gap: 1.5rem;
+    padding-right: 15px;
+}
+.navbar .toggle_btn{
+    color: brown;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 6px;
+    display: none;
+}
+/* .action_btn{
+    background-color: orange;
+    color: #f4f4f4;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+.action_btn:hover{
+    scale: 1.05;
+    color: #f4f4f4;
+}
+.action_btn:active{
+    scale: 0.95;
+} */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 30px;
+    width: 300px;
+    height: 0;
+    background: white;
+    /* backdrop-filter: blur(15px); */
+    /* border-radius: 10px; */
+    overflow: hidden;
+    z-index: 10;
+    transition: hight 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open{
+    height: 300px;
+}
+.dropdown_menu i{
+    padding-right: 4px;
+}
+.dropdown_menu li{
+    /* padding: 0.3rem; */
+    padding-left: 14px;
+    padding-top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
 /* Banner Section */
 .banner {
     max-width: 1000px;
@@ -37,11 +126,11 @@ p {
     font-family: 'Pacifico', cursive;
     background: url('./img/mainImg.jpg') no-repeat center center/cover;
     color: white;
-    height: 60vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -70px;
+    margin-top: -55px;
     position: relative; 
 }
 
@@ -148,19 +237,76 @@ p {
 }
 
 /* Map Section */
+
 .map {
-    background: #f4f4f4;
-    padding: 30px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+   
+}
+.map-content{
+    display: flex;
+    max-width: 1200px;
+    /* flex-wrap: wrap; */
+    gap: 30px;
 }
 
-#map {
+.company-info {
+    flex: 1;
+    /* width: 10%; */
+  }
+  #map-info{
+    flex: 1;
+    /* width: 50%; */
+    
+  }
+  #map-info iframe{
     width: 100%;
-    height: 300px;
-    background: #ccc;
-}
+  }
+  
+  .info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  
+  .label {
+    font-weight: bold;
+  text-align: right;
+  color: #555;
+  flex: 1; /* Ensures the label takes equal width in each row */
+  margin-right: 50px;
+  }
+  
+  .value {
+    text-align: left;
+    color: #333;
+    flex: 2; 
+  }
+  #footer{
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
 
 /* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
+    .navbar .links{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+        left: 2rem;
+        width: unset;
+    }
+
+    .banner{
+        height: 100vh;
+    }
     .banner h1 {
         font-size: 1.8rem;
     }
@@ -226,5 +372,22 @@ p {
     .story,
     .success {
         margin: 20px 60px;
+    }
+    .map{
+        flex-direction: column;
+        text-align: center;
+    }
+    .map-content{
+        flex-direction: column;
+        max-width: 700px;
+        margin: 10px;
+    }
+    .company-info{
+        /* margin: 10px 30px; */
+        width: 100%;
+    }
+    #map-info{
+        width: 100%;
+        max-width: 100%;
     }
 }

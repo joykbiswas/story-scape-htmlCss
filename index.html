@@ -3,31 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>HTML & CSS Project</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Navbar Section -->
-   <section class="navbar">
-    <div class="navbar-content">
-      <h5>TOP</h5>
-      <h5>VISION</h5>
-      <h5>MESSAGE</h5>
-      <h5>SERVICE</h5>
-      <h5>STORY</h5>
-      <h5>PROFILE</h5>
+   <div class="navbar">
+    <!-- <div class="logo"><a href="#">Story Scape</a></div> -->
+    <ul class="links">
+      <li><a href="#banner">TOP</a></li>
+      <li><a href="#vision">VISION</a></li>
+      <li><a href="#message">MESSAGE</a></li>
+      <li><a href="#service">SERVICE</a></li>
+      <li><a href="#story">STORY</a></li>
+      <li><a href="#profile">PROFILE</a></li>
+    </ul>
+    <!-- <a href="#" class="action_btn">Get Start</a> -->
+    <div class="toggle_btn">
+      <i class="fa-solid fa-bars"></i>
     </div>
-   </section>
+   </div>
+   <div class="dropdown_menu">
+    <li><i class="fa-solid fa-arrow-right"></i><a href="#banner">TOP</a></li><hr>
+      <li><i class="fa-solid fa-arrow-right"></i><a href="#vision">VISION</a></li><hr>
+      <li><i class="fa-solid fa-arrow-right"></i><a href="#message">MESSAGE</a></li><hr>
+      <li><i class="fa-solid fa-arrow-right"></i><a href="#service">SERVICE</a></li><hr>
+      <li><i class="fa-solid fa-arrow-right"></i><a href="#story">STORY</a></li><hr>
+      <li><i class="fa-solid fa-arrow-right"></i><a href="#profile">PROFILE</a></li>
+   </div>
   <!-- Banner Section -->
-  <section class="banner">
+  <section id="banner" class="banner">
     <div class="banner-content">
       <h1>Vestibulum mauris</h1>
       <p>最新技術と自然との調和を目指す</p>
     </div>
   </section>
   <!-- Vision Section -->
-  <section class="vision">
+  <section id="vision" class="vision">
     <div>
         <h2>VISION</h2>
         <p>ちかごろ世間で日本歴史の科学的研究ということがしきりに叫ばれている。科学的研究というのが近代私学の学問的方法による研究という意義であるならば、これは史学の学徒の間に老いては一般に行われていることであるから、今更こと新しくいうには及ばないはずである。上に行ったような事柄については、曖昧な態度をとり、または真実でない知識を強いて注入していたことも、明らかな事実である。</p>
@@ -35,7 +49,7 @@
   </section>
 
   <!-- Message Section -->
-  <section class="message">
+  <section id="message" class="message">
     <div class="message-content">
       <img src="./img/sec02_01.jpg" alt="Message Image">
       <div class="text">
@@ -56,7 +70,7 @@
   </section>
 
   <!-- Service Section -->
-   <section class="service">
+   <section id="service" class="service">
     <div class="service-content">
       <div>
         <h2>SERVICE</h2>
@@ -77,7 +91,7 @@
    </section>
 
   <!-- Story and Success Section -->
-  <section class="story-content">
+  <section id="story" class="story-content">
     <div class="story-success">
       <div class="story">
         <h2>Story</h2>
@@ -91,9 +105,63 @@
   </section>
 
   <!-- Map Section -->
-  <section class="map">
-    <h2>Our Location</h2>
-    <div id="map"></div>
+  
+  <section id="profile" class="map">
+    <div class="map-content">
+      <div class="company-info">
+        <div class="info-item">
+          <span class="label">>社名 </span>
+          <span class="value">Sample Company</span>
+        </div>
+        <div class="info-item">
+          <span class="label">代表取締役 </span>
+          <span class="value">見本 太郎 </span>
+        </div>
+        <div class="info-item">
+          <span class="label">電話番号</span>
+          <span class="value">見本県見本市仮区見本町1-3-5</span>
+        </div>
+        <div class="info-item">
+          <span class="label">電話番号</span>
+          <span class="value">01234-567-8901</span>
+        </div>
+        <div class="info-item">
+          <span class="label">設立</span>
+          <span class="value">20XX年5月5日</span>
+        </div>
+        <div class="info-item">
+          <span class="label">資本金</span>
+          <span class="value">1,000,000円</span>
+        </div>
+        <div class="info-item">
+          <span class="label">主な取引先</span>
+          <span class="value">見本商事株式会社 <br />,株式会社年中無休商事,<br /> 株式会社仮称</span>
+        </div>
+      </div>
+      <div id="map-info">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.5936140209346!2d136.92942347475565!3d36.708302272876246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff781ec5af4ca3f%3A0x2ade3e8e4c2801b8!2sFukuoka%20Station!5e0!3m2!1sen!2sbd!4v1732687467939!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
   </section>
+  <!-- Footer section -->
+   <section>
+    <div id="footer">
+      <h5>Copyright (c) 20xx Sample Inc. All Right Reserved. Design by http://f-tpl.com</h5>
+    </div>
+   </section>
+  <script>
+      const toggleBtn = document.querySelector('.toggle_btn')
+      const toggleBtnIcon= document.querySelector('.toggle_btn i')
+      const dropDownMenu = document.querySelector('.dropdown_menu')
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        :'fa-solid fa-bars'
+      }
+  </script>
 </body>
 </html>
